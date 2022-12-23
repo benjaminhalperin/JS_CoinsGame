@@ -1,0 +1,316 @@
+html {
+	margin: 0;
+	padding: 0;
+	background-color: #777;
+	scroll-behavior: smooth;
+}
+body {
+	width: 90%;
+	margin: 0 auto;
+	font: 100% Arial, Helvetica, sans-serif;
+	padding: 1em 50px;
+	background: white;
+	border-bottom: 10px solid gold;
+}
+h1 {
+	COLOR: magenta;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 20pt;
+    FONT-WEIGHT: bold;
+    MARGIN-BOTTOM: 12pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 6pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+h2
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 13pt;
+    FONT-WEIGHT: bold;
+    MARGIN-BOTTOM: 3pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 6pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+h3
+{
+    COLOR: #181E7F;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 13pt;
+    FONT-WEIGHT: bold;
+	font-style: italic;
+    MARGIN-BOTTOM: 8pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 16pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+h4
+{
+    COLOR: navy;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 15pt;
+    FONT-WEIGHT: bold;
+    MARGIN-BOTTOM: 6pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 12pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+h5
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+    MARGIN-BOTTOM: 6pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 16pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+h6
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+	FONT-STYLE: italic;
+    MARGIN-BOTTOM: 6pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 16pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+pRegtext
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10pt;
+    MARGIN-BOTTOM: 9pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 9pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+pCaption
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: italic;
+    MARGIN-BOTTOM: 12pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 6pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+.pCaution
+{
+    BACKGROUND-COLOR: #ffccb3;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10pt;
+    MARGIN-BOTTOM: 12pt;
+    MARGIN-LEFT: 12pt;
+    MARGIN-TOP: 6pt;
+    PADDING-BOTTOM: 2pt;
+    PADDING-LEFT: 2pt;
+    PADDING-RIGHT: 2pt;
+    PADDING-TOP: 2pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt;
+	 border: solid 2px #ff0000;
+     border-radius: 6px;
+	 BORDER-LEFT: 10px solid #e64d00;
+}
+.pCellBodyCentered
+   {
+       COLOR: black;
+       FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+       FONT-SIZE: 10pt;
+       FONT-WEIGHT: normal;
+       MARGIN-BOTTOM: 0pt;
+       MARGIN-LEFT: 0pt;
+       MARGIN-TOP: 0pt;
+       TEXT-ALIGN: center;
+       TEXT-INDENT: 0pt
+   }
+.pCellBodyToP
+   {
+       COLOR: navy;
+       FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+       FONT-SIZE: 10pt;
+       FONT-WEIGHT: bold;
+       MARGIN-BOTTOM: 4pt;
+       MARGIN-LEFT: 0pt;
+       MARGIN-TOP: 2pt;
+       TEXT-ALIGN: left;
+       TEXT-INDENT: 0pt
+   }
+.pCellBodyToPAfter
+   {
+       COLOR: navy;
+       FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+       FONT-SIZE: 10pt;
+       FONT-WEIGHT: bold;
+       MARGIN-BOTTOM: 4pt;
+       MARGIN-LEFT: 0pt;
+       MARGIN-TOP: 3pt;
+       TEXT-ALIGN: left;
+       TEXT-INDENT: 0pt
+   }
+.pCellHeading
+   {
+       COLOR: black;
+       FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+       FONT-SIZE: 10pt;
+       FONT-WEIGHT: bold;
+       MARGIN-BOTTOM: 0pt;
+       MARGIN-LEFT: 0pt;
+       MARGIN-TOP: 0pt;
+       TEXT-ALIGN: left;
+       TEXT-INDENT: 0pt
+   }
+.pComment
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: italic;
+    MARGIN-BOTTOM: 12pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 6pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+   .pNewHTMLPage
+   {
+       COLOR: navy;
+       FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+       FONT-SIZE: 16pt;
+       FONT-WEIGHT: bold;
+       MARGIN-BOTTOM: 12pt;
+       MARGIN-LEFT: 14pt;
+       MARGIN-TOP: 6pt;
+       TEXT-ALIGN: left;
+       TEXT-INDENT: 0pt
+   }
+.pNote
+{
+    BACKGROUND-COLOR: #ffffe0;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10pt;
+    MARGIN-BOTTOM: 12pt;
+    MARGIN-LEFT: 12pt;
+    MARGIN-TOP: 6pt;
+    PADDING-BOTTOM: 2pt;
+    PADDING-LEFT: 2pt;
+    PADDING-RIGHT: 2pt;
+    PADDING-TOP: 2pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt;
+	 border: solid 1px #3498db;
+     border-radius: 6px;
+	 BORDER-LEFT: 10px solid #3498db;
+}
+
+.pPlatform
+{
+    COLOR: #008b8b;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 16pt;
+    FONT-STYLE: italic;
+    MARGIN-BOTTOM: 12pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 6pt;
+    TEXT-ALIGN: center;
+    TEXT-INDENT: 0pt
+}
+
+.pRegtext
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10pt;
+    MARGIN-BOTTOM: 9pt;
+    MARGIN-LEFT: 14pt;
+    MARGIN-TOP: 9pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+
+.pSmartBullet1
+{
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10pt;
+    LIST-STYLE: disc;
+    MARGIN-BOTTOM: 4pt;
+    MARGIN-LEFT: 10pt;
+    MARGIN-TOP: 4pt;
+    TEXT-ALIGN: left;
+    TEXT-INDENT: 0pt
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: #f0f5f5;
+}
+#orange
+  {
+    background-color: orange;
+  }
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+p {
+	line-height: 1.6;
+	text-align: justify;
+	width: 80%;
+	margin: 0;
+	margin-bottom: 1em;
+}
+a {
+	text-decoration: none;
+	color: red;
+}
+a:hover {
+	color: black;
+}
+
+
+.gotopbtn
+{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-size: 32px;
+}
+
+
+

@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DOM Manipulation</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<style>
+/*********************  Section GO2TOP  ************************/
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  background-color: #ddeedd;
+  border: 3px solid #73AD21;
+}
+
+/*********************  Section PERVNEXT buttons  ************************/
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/*********  special buttons style - cut corner **************/
+
+.button {
+  --border: 7px;    /* the border width */
+  --slant: 0.7em;   /* control the slanted corners */
+  --color: #3900A6; /* the color */
+  
+  font-size: 35px;
+  padding: 0.4em 1.2em;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color);
+  background: 
+     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+              100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+             );
+  transition: color var(--t,0.3s), background-size 0.3s;
+}
+.button:hover,
+.button:active{
+  background-size: 100% 100%;
+  color: #fff;
+  --t: 0.2s 0.1s;
+}
+.button:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000a;
+}
+.button:active {
+  --s: #0005;
+  transition: none;
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- Ionic icons CDN -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+	<h2><a id="top"></a></h2>
+	<blockquote>
+		
+		<h1>47. Dynamic JavaScript Coin Flipping game DOM game Coding Challenge</h1><br>
+		<h2>Ref: S3L47</h2><br>
+		<h2>Lecture title:</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47-titleslide.jpg"></div>
+		<br><br>
+		<h3>Legend:</h3>
+		<div class="pSmartBullet1">
+			<ul class="pSmartBullet1">
+				<li><a href="#wp65276">create basic page elements</a></li>
+				<li><a href="#wp65277">styling to page basic elements</a></li>
+				<li><a href="#wp65278">buttons to toggle coin sides</a></li>
+				<li><a href="#wp65279">flipper fn to flip coins</a></li>
+				<li><a href="#wp65280">styling coins flipping buttons: Heads vs Tails</a></li>
+				<li><a href="#wp65281">checker fn to console log if result correct/wrong</a></li>
+				<li><a href="#wp65282">output scores printout in document HTML </a></li>
+				<li><a href="#wp65283">formation game area for number players (new JS code version)</a></li>
+				<li><a href="#wp65284">lecture executable drill demo</a></li>
+				<!--<li><a href="#wp65285">lecture executable drill demo </a></li>
+				<li><a href="#wp65286">#</a></li>
+				<li><a href="#wp65287">#</a></li>
+				<li><a href="#wp65288">#</a></li>
+				<li><a href="#wp65289">#</a></li>-->
+			</ul>
+		</div>
+		<br><br>
+		<h2>code1</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide1.jpg"></div>
+		<br><br>
+		<a name="wp65276"> </a>
+		<h2>code2</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide2.jpg"></div>
+		<br><br>
+		<h2>code3</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide3.jpg"></div>
+		<br><br>
+		<a name="wp65277"> </a>
+		<h2>code4</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide4.jpg"></div>
+		<br><br>
+		<h2>code5</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide5.jpg"></div>
+		<br><br>
+		<h2>code6</h2>
+		<a name="wp65278"> </a>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide6.jpg"></div>
+		<br><br>
+		<h2>code7</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide7.jpg"></div>
+		<br><br>
+		<h2>code8</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide8.jpg"></div>
+		<br><br>
+		<h2>code9</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide9.jpg"></div>
+		<br><br>
+		<h2>code10</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide10.jpg"></div>
+		<br><br>
+		<h2>code11</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide11.jpg"></div>
+		<br><br>
+		<h2>code12</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide12.jpg"></div>
+		<br><br>
+		<h2>code13</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide13.jpg"></div>
+		<br><br>
+		<a name="wp65279"> </a>
+		<h2>code14</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide14.jpg"></div>
+		<br><br>
+		<h2>code15</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide15.jpg"></div>
+		<br><br>
+		<h2>code16</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide16.jpg"></div>
+		<br><br>
+		<h2>code17</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide17.jpg"></div>
+		<br><br>
+		<h2>code18</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide18.jpg"></div>
+		<br><br>
+		<a name="wp65280"> </a>
+		<h2>code19</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide19.jpg"></div>
+		<br><br>
+		<h2>code20</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide20.jpg"></div>
+		<br><br>
+		<h2>code21</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide21.jpg"></div>
+		<br><br>
+		<h2>code22</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide22.jpg"></div>
+		<br><br>
+		<h2>code23</h2>
+		<a name="wp65281"> </a>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide23.jpg"></div>
+		<br><br>
+		<h2>code24</h2>
+		<a name="wp65282"> </a>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide24.jpg"></div>
+		<br><br>
+		<h2>code25</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide25.jpg"></div>
+		<br><br>
+		<a name="wp65283"> </a>
+		<h2>code26</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide26.jpg"></div>
+		<br><br>
+		<h2>code27</h2>
+		<div class="pCaption" align="center"><img width="70%" src="Images/s3L47--slide27.jpg"></div>
+		<br><br>
+		<h2>code28</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide28.jpg"></div>
+		<br><br>
+		<h2>code29</h2>
+		<div class="pCaption" align="center"><img width="90%" src="Images/s3L47--slide29.jpg"></div>
+		<br><br>
+
+		<a name="wp65284"> </a>		
+		<h2>Final lecture version drill execute demo:</h2>
+		<a href="Images/s3L47-drill/index1.html" class="pointer">&raquo; Open code file</a>
+		<br><br><br>
+	</blockquote>
+	
+	
+	<!-- special buttons section - lecture code printout -->
+	<br><br>
+	 <a href="Images/s3L47--code.pdf" class="button">Lecture code</a>
+	<br><br><br><br><br><br>
+	
+			<!-- PERVNEXT btn section -->
+	<a href="#.html" class="previous">&laquo; Previous</a>
+	<a href="#.html" class="next">Next &raquo;</a>
+
+<!-- scroll to top of document -->
+	<a href="#" class="gotopbtn">
+		<ion-icon name="arrow-up-outline"></ion-icon>
+	</a>
+	
+</body>
+</html>
